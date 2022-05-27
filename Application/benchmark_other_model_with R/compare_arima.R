@@ -152,5 +152,5 @@ HN_ARIMA=data.frame(ZZ.fit,AY.fit,XX.fit,LY.fit,SQ.fit,NY.fit)
 HN_ARIMA
 write.csv(HN_ARIMA,"../benchmark_other_model_data/PM25_ARIMA.csv")
 
-setwd("../") #return to 
+setwd(current_path) #return to 
 
