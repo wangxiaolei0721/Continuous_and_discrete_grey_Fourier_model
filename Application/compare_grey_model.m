@@ -3,7 +3,7 @@ clc;
 clear;
 close all;
 %% add path to MATLAB
-addpath('..\')
+addpath('..\','.\benchmark_grey_model')
 %% order setting
 omega=pi/6; % angular frequency
 FN=[2,2,2,2,2,3]; % Fourier order
