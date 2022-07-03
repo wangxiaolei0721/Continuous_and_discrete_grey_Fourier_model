@@ -1,7 +1,8 @@
 
-## Matlab codes for paper, "考虑季节性特征的灰色傅里叶模型及其应用", by 王小雷, 谢乃明
+## Matlab codes for paper 
+## 王小雷, 谢乃明. 考虑季节性特征的灰色傅里叶模型及其应用
 
-## Code by 王小雷
+## Written by 王小雷
 
 ## College of Economics and Management, Nanjing University of Aeronautics and Astronautics, Nanjing 210016, China
 
