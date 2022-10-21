@@ -12,7 +12,7 @@ date=PM25.datetime;
 figure('unit','centimeters','position',[5,5,40,20],'PaperPosition',[5, 5, 40,20],'PaperSize',[40,20]);
 tiledlayout(2,3,'TileSpacing','Compact','Padding','Compact'); % new subfigure
 col = [0, 114, 189,255; 125, 46, 142, 255;119, 171, 47,255;217, 83, 24,255]/255;
-title0=["Zhengzhou", "Anyang", "Xinxiang", "Luoyang","Shangqiu","Nanyang"];
+title0=["(a) Zhengzhou", "(b) Anyang", "(c) Xinxiang", "(d) Luoyang","(e) Shangqiu","(f) Nanyang"];
 xlim=[dateshift(date(1),'start','month',-2),dateshift(date(end),'start','month',2)];
 ylim=[0,180;0,250;0,200;0,200;0,160;0,180];
 train_position=[160;222;177;175;140;157];

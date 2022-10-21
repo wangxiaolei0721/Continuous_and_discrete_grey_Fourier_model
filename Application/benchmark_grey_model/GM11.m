@@ -22,5 +22,5 @@ b=p(2);
 %% time sponse function
 k=[1:l+f]';
 xs=(x(1)-b/a)*exp(-a*(k-1))+b/a;
-x_fit=[NaN;diff(xs)];
+x_fit=[x(1);diff(xs)];
 end

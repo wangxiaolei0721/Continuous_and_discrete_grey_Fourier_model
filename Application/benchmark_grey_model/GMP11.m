@@ -32,5 +32,5 @@ for i=0:order
     g(:,i+1)=k.^i;
 end
 x1_fit=(x(1)-sum(gama))*exp(-alpha*(k-1))+g*gama;
-x_fit=[NaN;diff(x1_fit)];
+x_fit=[x(1);diff(x1_fit)];
 end

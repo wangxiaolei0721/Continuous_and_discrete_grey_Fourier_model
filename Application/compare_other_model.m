@@ -76,6 +76,5 @@ for i=1:6 % six cities
     legend(len{i},'FontSize',8,'NumColumns',2);
     xline(date(train),'--','HandleVisibility','off')
 end
-%%
 %% save figure
 savefig(gcf,'figure\case_compare_other.fig');

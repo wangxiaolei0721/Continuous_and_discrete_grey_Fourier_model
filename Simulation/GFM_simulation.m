@@ -1,4 +1,4 @@
-%% clear data and figure
+% clear data and figure
 clc;
 clear;
 close all;
@@ -20,7 +20,7 @@ x_train_val=repmat(x(1:train_val),1,rep);
 %% figure setting
 fig=figure('unit','centimeters','position',[10,10,30,10],'PaperPosition',[0, 0, 30,10],'PaperSize',[30,10]);
 pos=[0.07,0.13,0.2,0.80; 0.31,0.13,0.2,0.80;0.55,0.13,0.2,0.80;0.79,0.13,0.2,0.80  ];
-titles=["\sigma=0.10";"\sigma=0.20";"\sigma=0.30";"\sigma=0.40"];
+titles=["(a) \sigma=0.10";"(b) \sigma=0.20";"(c) \sigma=0.30";"(d) \sigma=0.40"];
 colors = [ 217, 83, 25, 160;0, 114, 189, 160]'/255;
 xlabs = {'0','1','2','3','4','5','6'};
 labels={'MAE_{F}', 'MAE_{T}'};

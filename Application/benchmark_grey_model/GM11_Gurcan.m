@@ -36,5 +36,5 @@ C=exp(alpha*t0)*C0;
 for t=1:l+f
     x1_fit(t,1)=C*exp(-alpha*t)+cos_cor*cos(omega*t)+sin_cor*sin(omega*t);
 end
-x_fit=[NaN;diff(x1_fit)];
+x_fit=[x(1);diff(x1_fit)];
 end

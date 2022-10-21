@@ -1,6 +1,6 @@
 
-## Matlab codes for paper 
-## 王小雷, 谢乃明. 考虑季节性特征的灰色傅里叶模型及其应用, 系统工程理论与实践, 2022, 1-14.
+## Matlab and R codes for the paper 
+## 王小雷, 谢乃明. 考虑周期性特征的灰色傅里叶模型及其应用, 控制与决策, 2022, 1-11.
 
 ## Written by 王小雷
 

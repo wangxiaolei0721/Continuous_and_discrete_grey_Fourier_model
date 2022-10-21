@@ -2,6 +2,8 @@
 clc;
 clear;
 close all;
+%% add path to MATLAB
+addpath('..\','.\benchmark_grey_model')
 %% load data
 load PM25.mat;
 omega=pi/6; % angular frequency
@@ -11,7 +13,7 @@ tiledlayout(2,3,'TileSpacing','Compact','Padding','Compact'); % new subfigure
 %% Zhengzhou
 nexttile % next subfigure
 x=PM25.zhengzhou;
-x_detrend=x(1:train)-DGFM(x(1:train),omega,0,0); % remove trend
+x_detrend=x(1:train)-GM11(x(1:train),0); % remove trend
 [ xfreq,xpower]=fourier_transform(x_detrend); % power
 plot(xfreq,xpower,'color',[0, 114, 189]/255,'LineWidth',1.5)
 xline(xfreq(6),'--','HandleVisibility','off')
@@ -25,7 +27,7 @@ title("(a) Zhengzhou",'FontWeight','bold','FontSize',14);
 %% Anyang
 nexttile % next subfigure
 x=PM25.anyang;
-x_detrend=x(1:train)-DGFM(x(1:train),omega,0,0); % remove trend
+x_detrend=x(1:train)-GM11(x(1:train),0); % remove trend
 [ xfreq,xpower]=fourier_transform(x_detrend); % power
 plot(xfreq,xpower,'color',[0, 114, 189]/255,'LineWidth',1.5)
 xline(xfreq(6),'--','HandleVisibility','off')
@@ -39,7 +41,7 @@ title("(b) Anyang",'FontWeight','bold','FontSize',14);
 %% Xinxiang
 nexttile % next subfigure
 x=PM25.xinxiang;
-x_detrend=x(1:train)-DGFM(x(1:train),omega,0,0); % remove trend
+x_detrend=x(1:train)-GM11(x(1:train),0); % remove trend
 [ xfreq,xpower]=fourier_transform(x_detrend); % power
 plot(xfreq,xpower,'color',[0, 114, 189]/255,'LineWidth',1.5)
 xline(xfreq(6),'--','HandleVisibility','off')
@@ -53,7 +55,7 @@ title("(c) Xinxiang",'FontWeight','bold','FontSize',14);
 %% Luoyang
 nexttile % next subfigure
 x=PM25.luoyang;
-x_detrend=x(1:train)-DGFM(x(1:train),omega,0,0); % remove trend
+x_detrend=x(1:train)-GM11(x(1:train),0); % remove trend
 [ xfreq,xpower]=fourier_transform(x_detrend); % power
 plot(xfreq,xpower,'color',[0, 114, 189]/255,'LineWidth',1.5)
 xline(xfreq(6),'--','HandleVisibility','off')
@@ -67,7 +69,7 @@ title("(d) Luoyang",'FontWeight','bold','FontSize',14);
 %% Shangqiu
 nexttile % next subfigure
 x=PM25.shangqiu;
-x_detrend=x(1:train)-DGFM(x(1:train),omega,0,0); % remove trend
+x_detrend=x(1:train)-GM11(x(1:train),0); % remove trend
 [ xfreq,xpower]=fourier_transform(x_detrend); % power
 plot(xfreq,xpower,'color',[0, 114, 189]/255,'LineWidth',1.5)
 xline(xfreq(6),'--','HandleVisibility','off')
@@ -81,12 +83,11 @@ title("(e) Shangqiu",'FontWeight','bold','FontSize',14);
 %% Nanyang
 nexttile % next subfigure
 x=PM25.nanyang;
-x_detrend=x(1:train)-DGFM(x(1:train),omega,0,0); % remove trend
+x_detrend=x(1:train)-GM11(x(1:train),0); % remove trend
 [ xfreq,xpower]=fourier_transform(x_detrend); % power
 plot(xfreq,xpower,'color',[0, 114, 189]/255,'LineWidth',1.5)
 xline(xfreq(6),'--','HandleVisibility','off')
 xline(xfreq(12),'--','HandleVisibility','off')
-xline(xfreq(18),'--','HandleVisibility','off')
 text(xfreq(6),800000,['$\rightarrow f$=',num2str(xfreq(6))],'Interpreter','latex')
 text(xfreq(12),300000,['$\rightarrow f$=',num2str(xfreq(12))],'Interpreter','latex')
 set(gca,'FontName','Book Antiqua','FontSize',12);
